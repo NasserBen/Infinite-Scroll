@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Patua One', cursive;
+  background-color: #1E2A34;
+}
+
+/* Header */
+h1 {
+  color: #887F59;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+
+/* Loader */
+.loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.5)
+}
+
+.loader img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* Image Container */
+
+.image-container {
+  margin: 10px 30%;
+  
+}
+
+.image-container img{
+  width: 100%;
+  margin-top: 10px;
+  transition: all 0.2s linear;
+}
+
+img:hover {
+  
+  transform: scale(1.03);
+}
+
+/* Media Query: Large Smart Phone */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+  }
+  .image-container {
+    margin: 10px;
+  }
+  img:hover {
+    transform: scale(1);
+  }
+}
+
