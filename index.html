@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infinite Scroll</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
     <link rel="icon" type="ico" href="icon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Heading -->
-    <h1>Unsplash - Infinite Scroll</h1>
+    <section id="Heading"><h1>Unsplash - Infinite Scroll</h1></section>
+    <!-- Filter -->
+    <div class="filter-options">
+        <div><input type="radio" name="Filter" id="Nature" value="Nature"><p>Nature</p></input></div>
+        <div><input type="radio" name="Filter" id="Food" value="Food"><p>Food</p></input></div>
+        <div><input type="radio" name="Filter" id="City" value="City"><p>City</p></input></div>
+        <div><input type="radio" name="Filter" id="Technology" value="Technology"><p>Technology</p></input></div>
+        <div><input type="radio" name="Filter" id="" value="Random"><p>Random</p></input></div>
+    </div>
+    
     <!-- Loader -->
     <div class="loader" id="loader">
         <img src="Loader.svg" alt="Loading...">
     </div>
     <!-- Image Container -->
     <div class="image-container" id="image-container"></div>
+    <!-- Scroll To Top -->
+    <a class="goTopBtn" href="#Heading"><i class="fas fa-arrow-up"></i></a>
     
     <!-- Main Script -->
     <script src="script.js"></script>
