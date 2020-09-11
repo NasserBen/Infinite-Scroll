@@ -13,13 +13,16 @@
     <section id="Heading"><h1>Unsplash - Infinite Scroll</h1></section>
     <!-- Filter -->
     <div class="filter-options">
-        <div><input type="radio" name="Filter" id="Nature" value="Nature"><p>Nature</p></input></div>
-        <div><input type="radio" name="Filter" id="Food" value="Food"><p>Food</p></input></div>
-        <div><input type="radio" name="Filter" id="City" value="City"><p>City</p></input></div>
-        <div><input type="radio" name="Filter" id="Technology" value="Technology"><p>Technology</p></input></div>
-        <div><input type="radio" name="Filter" id="" value="Random"><p>Random</p></input></div>
+        <div id="Nature"><input type="radio" name="Filter" value="Nature"><p>Nature</p></input></div>
+        <div id="Food"><input type="radio" name="Filter"  value="Food"><p>Food</p></input></div>
+        <div id="City"><input type="radio" name="Filter" value="City"><p>City</p></input></div>
+        <div id="Car"><input type="radio" name="Filter" value="Car"><p>Car</p></input></div>
+        <div id="Animal"><input type="radio" name="Filter" id="Animal" value="Animal"><p>Animal</p></input></div>
+        <div id="Technology"><input type="radio" name="Filter" value="Technology"><p>Technology</p></input></div>
+        <div><input type="radio" name="Filter" value="Random"><p>Random</p></input></div>
     </div>
-    
+    <!-- Search -->
+    <div id="Search"><i class="fas fa-search"></i><input type="search"></div>
     <!-- Loader -->
     <div class="loader" id="loader">
         <img src="Loader.svg" alt="Loading...">
@@ -27,8 +30,7 @@
     <!-- Image Container -->
     <div class="image-container" id="image-container"></div>
     <!-- Scroll To Top -->
-    <a class="goTopBtn" href="#Heading"><i class="fas fa-arrow-up"></i></a>
-    
+    <div id="goTopBtn"><i class="fas fa-arrow-up"></i></div>
     <!-- Main Script -->
     <script src="script.js"></script>
 </body>

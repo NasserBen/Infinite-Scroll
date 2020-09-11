@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 
 html {
   box-sizing: border-box;
@@ -8,13 +8,13 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'Patua One', cursive;
-  background-color: #1E2A34;
+  font-family: "Patua One", cursive;
+  background-color: #1e2a34;
 }
 
 /* Header */
 h1 {
-  color: #887F59;
+  color: #887f59;
   text-align: center;
   margin-top: 25px;
   margin-bottom: 15px;
@@ -23,8 +23,9 @@ h1 {
 }
 /* Filter */
 p {
-  color: #887F59;
+  color: #887f59;
   display: inline;
+  margin: 0;
 }
 
 .filter-options {
@@ -32,7 +33,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 500px;
+  max-width: 600px;
 }
 
 /* Loader */
@@ -42,50 +43,112 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255,255,255,0.5)
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .loader img {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 /* Image Container */
 
 .image-container {
   margin: 10px 30%;
-  
 }
 
-.image-container img{
+.image-container img {
   width: 100%;
   margin-top: 10px;
-  /* transition: all 0.2s linear; */
+  transition: all 0.2s linear;
 }
 
 img:hover {
-  
-  /* transform: scale(1.03); */
+  transform: scale(1.01);
+}
+
+/* Search */
+#Search {
+  display: flex;
+  margin: 15px auto;
+  align-items: center;
+  justify-content: center;
+  color: #887f59;
+  font-size: 1.5rem;
+}
+
+#Search input {
+  margin-left: 5px;
+  padding: 7px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
 }
 
 /* Go to top button */
-
-.goTopBtn {
+#goTopBtn {
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50px;
   height: 50px;
-  background-color: #887F59;
-  color: #1E2A34;
+  background-color: #887f59;
+  color: #1e2a34;
   border-radius: 100%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   text-decoration: none;
   bottom: 30px;
   right: 20px;
-  
+  visibility: hidden;
+}
+
+#goTopBtn:hover {
+  filter: brightness(110%);
+}
+
+#goTopBtn:active {
+  color: white;
+  width: 49px;
+  height: 49px;
+  border: 1px solid white;
+}
+/* Go to top button animations */
+.btnEntrance {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: btnEntrance;
+}
+
+.btnExit {
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+  animation-name: btnExit;
+}
+
+/* fadeInUp */
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* fadeOutDown */
+@keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
 }
 
 /* Media Query: Large Smart Phone */
@@ -93,6 +156,10 @@ img:hover {
   h1 {
     font-size: 25px;
   }
+  #Technology {
+    display: none;
+  }
+
   .image-container {
     margin: 10px;
   }
@@ -101,3 +168,42 @@ img:hover {
   }
 }
 
+/* Media Query: Some what Large Smart Phone */
+@media screen and (max-width: 345px) {
+  h1 {
+    font-size: 20px;
+  }
+  #Car {
+    display: none;
+  }
+}
+
+/* Media Query: Medium Smart Phone */
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 20px;
+  }
+  #City {
+    display: none;
+  }
+}
+
+/* Media Query: Small Smart Phone */
+@media screen and (max-width: 295px) {
+  h1 {
+    font-size: 15px;
+  }
+  #Animal {
+    display: none;
+  }
+}
+
+/* Media Query: Super Small Smart Phone */
+@media screen and (max-width: 222px) {
+  h1 {
+    font-size: 15px;
+  }
+  .filter-options {
+    display: none;
+  }
+}
