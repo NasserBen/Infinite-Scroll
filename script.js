@@ -10,8 +10,9 @@ let totalRequestedImages = 0;
 let photosArr = [];
 
 // Unsplash API
-const count = 7;
+const count = 30;
 let query = '';
+// Would normally store key in an environment variable
 const apiKey ='b2HlDXEYaaf8BeJtySariTvPp36_1SraPoeall8H4go';
 let apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}&query=`;
 
